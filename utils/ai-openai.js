@@ -31,6 +31,8 @@ export async function getDreamInterpretation(dreamText) {
       verbosity: "low",
     });
 
+    console.log({ model, message });
+
     return message.choices[0].message.content.trim();
   } catch (error) {
     console.error("OpenAI API error:", error);
