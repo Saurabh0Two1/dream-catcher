@@ -31,7 +31,7 @@ export async function getDreamInterpretation(dreamText) {
       verbosity: "low",
     });
 
-    console.log({ model, message });
+    console.log({ model, message: JSON.stringify(message) });
 
     return message.choices[0].message.content.trim();
   } catch (error) {
